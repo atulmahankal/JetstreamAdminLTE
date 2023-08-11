@@ -1,0 +1,45 @@
+{
+    "name": "atulmahankal/jetstreamadminlte",
+    "description": "Jetstream starter kit with AdminLTE theme",
+    "keywords": ["laravel", "jetstream","adminlte","theme","starter"],
+    "authors": [
+        {
+            "name": "Atul Mahankal",
+            "email": "atulmahankal@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.1.0",
+        "illuminate/console": "^10.0",
+        "laravel/jetstream": "^3.0",
+        "laravolt/avatar": "^5.0",
+        "almasaeed2010/adminlte": "~3.2"
+    },
+    "require-dev": {
+        "laravel/framework": "^10.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "AtulMahankal\\JetstreamAdminLte\\": "src/"
+        }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "@php artisan jetstreamadminlte:install"
+        ],
+        "post-update-cmd": [
+            "@php artisan jetstreamadminlte:install"
+        ],
+        "actions": "post-install-cmd"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "AtulMahankal\\JetstreamAdminLte\\JetstreamAdminLTEServiceProvider"
+            ],
+            "aliases": {}
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
